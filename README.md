@@ -16,7 +16,7 @@ Through text you are able to:
 ### Get Started:
 
 ```
-git https://github.com/rashansmith/algorand-purestake-twilio-sms
+git clone https://github.com/rashansmith/algorand-purestake-twilio-sms
 cd point-of-sale/algorand-purestake-twilio-sms
 mvn clean install
 ```
