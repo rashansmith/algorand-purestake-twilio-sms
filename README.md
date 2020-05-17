@@ -1,7 +1,7 @@
 # Summary
 
-This sample java project uses the Twilio SMS api to allow users to interact with the Algorand Purestake API:
-Through text are able to:
+This sample java project uses the Twilio SMS api to allow users to interact with the Algorand Purestake API.
+Through text you are able to:
 - get the supply on MainNet/TestNet/BetaNet
 - get the last round on MainNet/TestNet/BetaNet
 
