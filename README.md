@@ -85,7 +85,7 @@ Navigating to localhost:8080/sendForm and providing your credentials there:
 
 
 
-#### Test application
+### Test application
 Text 'supply' to your twilio number:
 
 ![supplyScreenshot](https://user-images.githubusercontent.com/6632748/82157421-5559ac80-984f-11ea-8bc9-eb12ef035f74.jpg)
