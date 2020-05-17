@@ -1,5 +1,6 @@
 package com.example.purestake;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
@@ -12,13 +13,19 @@ import com.algorand.algosdk.algod.client.model.Supply;
 @Service
 public class PureStake {
 
+	@Value("${spring.algodApiAddress.url}")
+	String algoApiAddress;
+	
+	@Value("${spring.algodApiKey}")
+	String algoApiKey;
+	
 	static AlgodClient client;
 	static AlgodApi algodApiInstance;
 
 	public void init() {
 		client = new AlgodClient();
-		client.setBasePath(System.getProperty("spring.algodApiAddress.url"));
-		client.addDefaultHeader("X-API-Key", System.getProperty("spring.algodApiKey"));
+		client.setBasePath(algoApiAddress);
+		client.addDefaultHeader("X-API-Key", algoApiKey);
 		algodApiInstance = new AlgodApi(client);
 	}
 

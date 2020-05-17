@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import com.example.purestake.PureStake;
-import com.example.twilio.SetEnvironmentVariables;
 import com.example.twilio.SmsSender;
 
 @Configuration
@@ -19,11 +18,6 @@ public class SpringBootConfiguration {
 	@Bean
 	public PureStake pureStake() {
 	    return new PureStake();
-	}
-	
-	@Bean
-	public SetEnvironmentVariables setEnvironmentVariables() {
-	    return new SetEnvironmentVariables();
 	}
 	
 }

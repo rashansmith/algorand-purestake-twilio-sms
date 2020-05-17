@@ -49,9 +49,7 @@ Configure your Twilio Messaging webhook to use exposed ngrok address:
 
 
 
-### There are 2 ways to deploy the application with your credentials:
-
-### 1. Add credentials to `application.properties` and then deploy the application : 
+### Deploy the application with your credentials:
 
 Modify the `src/main/resources/application.properties` file:
 
@@ -73,23 +71,6 @@ From the project directory in the command terminal:
 ```
 mvn spring-boot:run
 ```
-
-### OR 
-
-### 2. Deploy application and add credentials through Web Browser Form : 
-
-From the project directory in the command terminal: 
-
-```
-mvn spring-boot:run
-```
-
-
-Navigating to localhost:8080/sendForm and providing your credentials there:
-
-![sendForm](https://user-images.githubusercontent.com/6632748/82156856-e62e8900-984b-11ea-9905-109212c69e5c.JPG)
-
-
 
 
 
