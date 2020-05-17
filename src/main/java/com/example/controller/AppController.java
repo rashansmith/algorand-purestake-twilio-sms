@@ -44,12 +44,6 @@ public class AppController {
 		}
 	}
 
-	@RequestMapping(value = "/sendForm", produces = "application/xml", method = RequestMethod.GET)
-	public String sendForm() {
-
-		return "index";
-	}
-
 	@RequestMapping(value = "/testText", produces = "application/xml", method = RequestMethod.GET)
 	public void respondToText() {
 
