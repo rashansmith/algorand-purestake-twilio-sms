@@ -7,10 +7,19 @@ Through text you are able to:
 
 
 ### Prerequisites:
-- Java 1.8 or higher
+- Maven
+- JDK 8
 - Ngrok (to expose your localhost:8080): https://ngrok.com/download
 - Twilio Developer API account: https://www.twilio.com/try-twilio
 - PureStake Developer API account: https://developer.purestake.io/
+
+### Get Started:
+
+```
+git https://github.com/rashansmith/algorand-purestake-twilio-sms
+cd point-of-sale/algorand-purestake-twilio-sms
+mvn clean install
+```
 
 
 ### Twilio Configuration Instructions:
