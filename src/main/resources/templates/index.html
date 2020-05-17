@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset = "ISO-8859-1" />
+       <link th:href="@{/css/styles.css}" rel="stylesheet" type="text/css" />
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <title>Algorand: PureStake API and Twilio API Starter Project</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   </head>
+   <body>
+   <div class="row d-flex justify-content-center">
+   <div class="col-md-6">
+      <h3>PureStake & Twilio API Authentication </h3>
+      <h4></h4>
+       
+       <form action="authentication" method="post" >
+		<div class="form-group row">
+			<label for="twilio_account_sid" class="col-sm-6 col-form-label">Twilio Account SID:</label>
+			<div class="col-sm-6">
+				<input type="password" class="form-control"   name="twilio_account_sid"
+					placeholder="Twilio Account SID">
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<label for="twilio_auth_token" class="col-sm-6 col-form-label">Twilio Auth Token:</label>
+			<div class="col-sm-6">
+				<input type="password" class="form-control" name="twilio_auth_token" 
+					placeholder="Twilio Auth Token">
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<label for="twilio_twilio_number" class="col-sm-6 col-form-label">Twilio Number:</label>
+			<div class="col-sm-6">
+				<input type="password" class="form-control" name="twilio_twilio_number" 
+					placeholder="Twilio Number">
+			</div>
+		</div>
+		
+		<div class="form-group row">
+			<label for="twilio_my_number" class="col-sm-6 col-form-label">Your Number (Optional):</label>
+			<div class="col-sm-6">
+				<input type="password" class="form-control" name="twilio_my_number" 
+					placeholder="Optional">
+			</div>
+		</div>
+		
+		
+		<div class="form-group row">
+			<label for="algod_api_address" class="col-sm-6 col-form-label">PureStake API Address:</label>
+    		<div class="col-sm-6">
+      			<select class="form-control" name="algod_api_address">
+        			<option selected>Choose API Address..</option>
+        			<option  name="algod_api_address">MainNet</option>
+        			<option  name="algod_api_address">TestNet</option>
+        			<option  name="algod_api_address">BetaNet</option>
+      			</select>
+      		</div>
+		</div>
+		
+		<div class="form-group row">
+			<label for="algod_api_key" class="col-sm-6 col-form-label">PureStake API Key:</label>
+			<div class="col-sm-6">
+				<input type="password" class="form-control"  name="algod_api_key" 
+					placeholder="PureStake API Key">
+			</div>
+		</div>
+		<div class="form-group row">
+    		<div class="col-sm-10">
+      			<button type="submit"  id="authenticate" class="btn btn-primary">Authenticate</button>
+    		</div>
+  		</div>
+    </div>
+	</form>
+	<div class="form-group row">
+		<div class="col-sm-6">
+	     	<div id="alertMessage"></div>
+	    </div>
+	</div>
+	</div>
+	</div>
+       
+       <!-- BootStrap Javascript -->
+       <script th:src="@{/javascript/javascript.js}"></script>
+       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   </body>
+</html>
