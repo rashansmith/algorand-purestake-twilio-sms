@@ -20,7 +20,7 @@ If you want more detailed instructions: https://www.twilio.com/blog/2013/10/test
 Expose your localhost:8080 port with ngrok (windows command). The exposed url will be 
 used in the Twilio Developer Console:
 
-![Ngrok generated url](https://github.com/rashansmith/alogrand-purestake-twilio-sms/blob/master/ngrokImage.jpg?raw=true)
+![Ngrok generated url](ngrokImage.jpg)
 
 
 ```
@@ -35,7 +35,7 @@ Configure your Twilio Messaging webhook to use exposed ngrok address:
 - Click save
 
 
-![Twlio Developer Console](https://github.com/rashansmith/alogrand-purestake-twilio-sms/blob/master/twilioImage.jpg?raw=true)
+![Twlio Developer Console](twilioImage.jpg)
 
 
 #### Deploy application
@@ -65,7 +65,7 @@ OR
 
 Navigating to localhost:8080/sendForm and providing your credentials there:
 
-![Provide Credentials](https://github.com/rashansmith/alogrand-purestake-twilio-sms/blob/master/sendForm.jpg?raw=true)
+![Provide Credentials](sendForm.jpg)
 
 
 #### Test application
