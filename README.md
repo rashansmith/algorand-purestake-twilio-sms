@@ -14,17 +14,24 @@ Through text are able to:
 
 
 ### Twilio Configuration Instructions:
+If you want more detailed instructions: https://www.twilio.com/blog/2013/10/test-your-webhooks-locally-with-ngrok.html
 
-Expose your localhost:8080 port (windows command)
+
+1. Expose your localhost:8080 port with ngrok (windows command). The exposed url will be 
+used in the Twilio Developer Console:
+
+![Ngrok generated url](ngrokImage.jpg)
+
 
 ```
 ngrok http 8080 
 ```
 
-Configure your Twilio Messaging webhook to use exposed ngrok address
+2. Configure your Twilio Messaging webhook to use exposed ngrok address. Make sure to:
+- Add '/text' at the end of your url (this the endpoint defined in our controller)
+- Set the WebHook to `GET`
 
-Instructions: https://www.twilio.com/blog/coding-twilio-webhooks-in-java-with-spring-boot
-
+![Twlio Developer Console](twilioImage.jpg)
 
 
 #### Deploy application
@@ -36,14 +43,29 @@ mvn spring-boot:run
 
 #### Add your PureStake and Twilio API credentials to the application by:
 
-1. Editing the `src/main/resources/application.properties` file OR
-2. navigating to localhost:8080/sendForm and providing your credentials there
+1. Modifying the `src/main/resources/application.properties` file:	
 
+```
+# Twilio API Keys and relevant variables
+spring.twilioAccountSid= # Add your AccountSID here 
+spring.twilioAuthToken=  # Add your AuthToken here 
+spring.twilioNumber=	# Add your twilioNumber here 
+spring.myNumber=         # Add yourNumber here (optional)
+
+#PureStake API keys and relevant variables
+spring.algodApiAddress.url= # Add your PureStake API Address here
+spring.algodApiKey= # Add your PureStake API Key here
+```
+
+2. navigating to localhost:8080/sendForm and providing your credentials there
 
 
 #### Test application
 - Text 'supply' to your twilio number
 - Text 'lastround' to your twilio number
+
+
+
 
 
 
