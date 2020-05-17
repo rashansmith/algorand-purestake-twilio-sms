@@ -22,7 +22,6 @@ used in the Twilio Developer Console:
 
 ![ngrokImage](https://user-images.githubusercontent.com/6632748/82156857-e7f84c80-984b-11ea-9142-500e47542ef2.JPG)
 
-
 ```
 ngrok http 8080 
 ```
