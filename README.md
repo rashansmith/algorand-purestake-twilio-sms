@@ -51,7 +51,7 @@ Modify the `src/main/resources/application.properties` file:
 spring.twilioAccountSid= # Add your AccountSID here 
 spring.twilioAuthToken=  # Add your AuthToken here 
 spring.twilioNumber=	# Add your twilioNumber here 
-spring.myNumber=         # Add yourNumber here (optional)
+spring.myNumber=         # Add your Number here (optional)
 
 #PureStake API keys and relevant variables
 spring.algodApiAddress.url= # Add your PureStake API Address here

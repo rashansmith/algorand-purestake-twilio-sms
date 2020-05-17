@@ -18,7 +18,6 @@ public class SmsSender {
 	@Autowired
 	PureStake pureStake;
 	
-	// Find your Account Sid and Token at twilio.com/user/account
 	@Value("${spring.twilioAccountSid}")
 	String TwilioAccountSID;
 	
@@ -31,15 +30,6 @@ public class SmsSender {
 	@Value("${spring.myNumber}")
 	String MyNumber;
 	
-	public  void sendMessage() {
-		Twilio.init(TwilioAccountSID, TwilioAuthToken);
-
-		Message message = Message
-				.creator(new PhoneNumber(MyNumber), new PhoneNumber(TwilioNumber), "Testing out this Twilio Thing")
-				.create();
-		System.out.println(message.getSid());
-	}
-
 	public  void sendMessage(String messageToSend) {
 		Twilio.init(TwilioAccountSID,TwilioAuthToken);
 		Message message = Message.creator(new PhoneNumber(MyNumber), new PhoneNumber(TwilioNumber), messageToSend)
