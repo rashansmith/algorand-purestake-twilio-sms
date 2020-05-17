@@ -17,7 +17,7 @@ Through text you are able to:
 
 ```
 git clone https://github.com/rashansmith/algorand-purestake-twilio-sms
-cd point-of-sale/algorand-purestake-twilio-sms
+cd algorand-purestake-twilio-sms
 mvn clean install
 ```
 
