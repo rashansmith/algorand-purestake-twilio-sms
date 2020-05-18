@@ -1,9 +1,11 @@
 # Summary
 
-This sample java project uses the Twilio SMS api to allow users to interact with the Algorand Blockchain Purestake API.
-Through text you are able to:
-- get the supply on MainNet/TestNet/BetaNet
-- get the last round on MainNet/TestNet/BetaNet
+This sample SpringBoot Java project uses the Twilio SMS and Voice APIs to allow users to interact with the Algorand Blockchain Purestake API.
+Through text and a phone calls you are able to:
+- get the supply on MainNet/TestNet/BetaNet through SMS and Voice
+- get the last round on MainNet/TestNet/BetaNet through SMS and Voice
+
+This sample implementation can be expanded to many more features and interactions.
 
 
 ### Prerequisites:
@@ -37,15 +39,25 @@ ngrok http 8080
 
 
 Configure your Twilio Messaging webhook to use exposed ngrok address:
-- In the Twilio Dev Console, Go to Manage Numbers ->  Active Numbers and click on the number you are going to use for this project
-- Scroll down to the Messaging section
+
+In the Twilio Dev Console, Go to **Manage Numbers** **->**  **Active Numbers** and click on the number you are going to use for this project
+
+Scroll down to the **Voice & Fax** section
+- Add your ngrok url
+- Add '/voice' at the end of your url (this the endpoint defined in our controller)
+- Set the WebHook to `GET`
+- Click save
+	
+![vcTwilio](https://user-images.githubusercontent.com/6632748/82241711-9f539880-990a-11ea-8d39-d19a01adf0cf.JPG)
+
+Scroll down to the **Messaging** section
+- Add your ngrok url
 - Add '/text' at the end of your url (this the endpoint defined in our controller)
 - Set the WebHook to `GET`
 - Click save
 
 
 ![twilioImage](https://user-images.githubusercontent.com/6632748/82156853-e169d500-984b-11ea-9847-02470e8e9a39.JPG)
-
 
 
 
@@ -76,13 +88,21 @@ mvn spring-boot:run
 
 
 ### Test application
-Text 'supply' to your twilio number:
+Text 'supply' to your Twilio number:
 
 ![supplyScreenshot](https://user-images.githubusercontent.com/6632748/82157421-5559ac80-984f-11ea-8bc9-eb12ef035f74.jpg)
 
-Text 'lastround' to your twilio number:
+Text 'lastround' to your Twilio number:
 
 ![lastRoundScreenShot](https://user-images.githubusercontent.com/6632748/82157430-62769b80-984f-11ea-937d-547d599bd3ef.jpg)
+
+
+
+Call your Twilio number: 
+- Press any number (to bypass trial introduction statment)
+- Follow the voice command (Press 1 for the supply, press 2 for the lastround)
+- a voice will provide the result and hangup.
+
 
 
 
