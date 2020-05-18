@@ -1,7 +1,7 @@
 # Summary
 
 This sample SpringBoot Java project uses the Twilio SMS and Voice APIs to allow users to interact with the Algorand Blockchain Purestake API.
-Through text and a phone calls you are able to:
+Through text and phone calls you are able to:
 - get the supply on MainNet/TestNet/BetaNet through SMS and Voice
 - get the last round on MainNet/TestNet/BetaNet through SMS and Voice
 
