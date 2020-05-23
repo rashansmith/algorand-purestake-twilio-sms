@@ -46,11 +46,11 @@ public class PureStake {
 
 	public String getSupply() {
 		init();
-		String prettySupply = null;
+		String supplyResult = null;
 
 		try {
 			Supply supply = algodApiInstance.getSupply();
-			prettySupply = "Supply Summary " + "\n" + "Online Money: " + supply.getOnlineMoney() + "\n" + "Round: "
+			supplyResult = "Supply Summary " + "\n" + "Online Money: " + supply.getOnlineMoney() + "\n" + "Round: "
 					+ supply.getRound() + "\n" + "Total Money: " + supply.getTotalMoney();
 
 		} catch (ApiException e) {
@@ -58,7 +58,7 @@ public class PureStake {
 			e.printStackTrace();
 		}
 
-		return prettySupply;
+		return supplyResult;
 	}
 
 	public List<String> getSupplyInt() {
